@@ -14,6 +14,16 @@
       "name": "Geladeira",
       "price": 5000.89,
       "id": 3
+    },
+    {
+      "name": "Veio do Formúlario",
+      "price": "9.99",
+      "id": 4
+    },
+    {
+      "name": "PC",
+      "price": "1984.80",
+      "id": 5
     }
   ]
 }
