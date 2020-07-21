@@ -1,4 +1,7 @@
+import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-product-create',
@@ -7,15 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCreateComponent implements OnInit {
 
-  propLegal = "qualquer";
+  constructor(
+    private producService: ProductService,
+    private router: Router) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
-  fazerAlgo(): void {
-    console.log('Fazendo algo!');
+  createProduct(): void{
+    this.producService.showMessage('Produto criado!');
+  }
+
+  cancel(): void{
+    this.router.navigate(['/products']);
   }
 
 }
